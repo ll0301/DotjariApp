@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="shopType">
+        <item>    사주    </item>
+        <item>신점</item>
+        <item>타로</item>
+        <item>개명</item>
+    </string-array>
+
+</resources>

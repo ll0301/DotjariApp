@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "646442268677",
+    "firebase_url": "https://fortuneapp-cddd1.firebaseio.com",
+    "project_id": "fortuneapp-cddd1",
+    "storage_bucket": "fortuneapp-cddd1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646442268677:android:2866e7a3da80ad86",
+        "android_client_info": {
+          "package_name": "com.example.wante.dotjariapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646442268677-skhkb2g4gvrb41josfhdo2pkbkbqitcp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wante.dotjariapp",
+            "certificate_hash": "69eea0dee4e48fca971af21addf19b31736dfe48"
+          }
+        },
+        {
+          "client_id": "646442268677-arct4vkat4mt9mgunevma651ggavqe77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnAT1fdKoIPF8FLDx-lXW68O3ekwiBvzo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646442268677-arct4vkat4mt9mgunevma651ggavqe77.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

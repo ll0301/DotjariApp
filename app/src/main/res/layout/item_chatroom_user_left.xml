@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/myfriend_profilePic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_my_photo_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/chatRoom_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/myfriend_profilePic"
+        app:layout_constraintTop_toTopOf="@+id/myfriend_profilePic"
+        tools:text="사용자 이름영역" />
+
+
+    <TextView
+        android:id="@+id/chatRoom_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/chat_box_left"
+        android:padding="6dp"
+        android:textColor="#fff"
+        android:maxLength="29"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/myfriend_profilePic"
+        app:layout_constraintStart_toStartOf="@+id/chatRoom_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/chatRoom_user_name"
+        tools:text="메세지" />
+
+
+    <TextView
+        android:id="@+id/tv_seen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="읽음"
+        android:textColor="@color/design_default_color_primary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/chatRoom_message"
+        app:layout_constraintStart_toEndOf="@+id/chatRoom_message" />
+
+    <ImageView
+        android:id="@+id/iv_chatRoom_imgUri"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/chatRoom_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/chatRoom_user_name" />
+
+
+</android.support.constraint.ConstraintLayout>

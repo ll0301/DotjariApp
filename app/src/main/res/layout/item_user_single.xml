@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/cl_singleUser"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Shop Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_myFriends_name"
+        app:layout_constraintEnd_toEndOf="@+id/tv_myFriends_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_myFriends_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_myFriends_name" />
+    <TextView
+        android:id="@+id/tv_single_userId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/prompt_userID"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_myFriends_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_myFriends_email"
+        app:layout_constraintTop_toTopOf="@+id/tv_myFriends_email" />
+
+    <ImageView
+        android:id="@+id/singleStar"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/ic_star"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/myfriend_profilePic"
+        app:layout_constraintEnd_toEndOf="@+id/myfriend_profilePic"
+        app:layout_constraintStart_toStartOf="@+id/myfriend_profilePic" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_on"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:visibility="gone"
+        android:src="@color/design_default_color_primary"
+        app:layout_constraintBottom_toBottomOf="@+id/myfriend_profilePic"
+        app:layout_constraintEnd_toEndOf="@+id/myfriend_profilePic" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_off"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@color/colorPrimaryDark"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/myfriend_profilePic"
+        app:layout_constraintEnd_toEndOf="@+id/myfriend_profilePic" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/myfriend_profilePic"
+        android:layout_width="50dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_my_photo_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/tv_myFriends_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/myfriend_profilePic"
+        app:layout_constraintTop_toTopOf="@+id/myfriend_profilePic" />
+
+    <TextView
+        android:id="@+id/tv_myFriends_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="user Email"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_myFriends_name"
+        app:layout_constraintStart_toEndOf="@+id/tv_myFriends_name" />
+
+    <TextView
+        android:id="@+id/tv_single_userStatus"
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:hint="User Status"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_myFriends_name"
+        app:layout_constraintStart_toEndOf="@+id/tv_myFriends_name" />
+
+    <TextView
+        android:id="@+id/last_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:maxLines="1"
+        android:padding="4dp"
+        android:text="111"
+        android:textColor="#FFC107"
+        app:layout_constraintStart_toStartOf="@+id/tv_myFriends_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_myFriends_name" />
+
+
+
+
+        //숫자표기 추가
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/chatroom_count_civ"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="#FFFC0505"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/chatRoom_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/chatroom_count_civ"
+        app:layout_constraintEnd_toEndOf="@+id/chatroom_count_civ"
+        app:layout_constraintStart_toStartOf="@+id/chatroom_count_civ"
+        app:layout_constraintTop_toTopOf="@+id/chatroom_count_civ" />
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

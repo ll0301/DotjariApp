@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+
+    >
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/chat_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="15sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#9500ff"
+        android:visibility="gone"
+        android:src="@drawable/ic_add_black_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/chat_fab_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="15sp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        android:backgroundTint="#9500ff"
+        android:src="@drawable/ic_remove_black_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/chat_fab"
+        app:layout_constraintEnd_toEndOf="@+id/chat_fab"
+        app:layout_constraintStart_toStartOf="@+id/chat_fab" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        //홈버튼
+
+        <ImageView
+            android:id="@+id/home_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/ic_home_non" />
+
+        //티켓버튼
+
+        //채팅봇버튼
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <ImageView
+                android:id="@+id/chat_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:src="@drawable/ic_chat"
+                android:textColor="#090808"
+                android:textStyle="bold" />
+            //숫자표기 추가
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/chat_count_civ"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:src="#FFFC0505"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/chat_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/chat_count_civ"
+                app:layout_constraintEnd_toEndOf="@+id/chat_count_civ"
+                app:layout_constraintStart_toStartOf="@+id/chat_count_civ"
+                app:layout_constraintTop_toTopOf="@+id/chat_count_civ" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        //더보기 버튼
+
+        <ImageView
+            android:id="@+id/ticket_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/search_2" />
+
+        <ImageView
+            android:id="@+id/more_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/ic_more_non" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="채팅"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    /*********************************메뉴바************************************/
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopRegisterActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="업체등록"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="소속업체"
+
+            app:layout_constraintBottom_toBottomOf="@+id/et_shop_profile_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_shop_profile_name" />
+
+        <EditText
+            android:id="@+id/et_shop_profile_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="end"
+            android:hint="ex)상도사주카페"
+            android:lines="1"
+            android:maxLength="30"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="활동명"
+            app:layout_constraintBottom_toBottomOf="@+id/et_shop_profile_username"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/et_shop_profile_username" />
+
+        <EditText
+            android:id="@+id/et_shop_profile_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="end"
+            android:hint="본명/예명 택1"
+            android:lines="1"
+            android:maxLength="12"
+            android:padding="8dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/et_shop_profile_name" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="업체주소"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_shop_profile_district"
+            app:layout_constraintEnd_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toTopOf="@+id/tv_shop_profile_district" />
+
+        <TextView
+            android:id="@+id/tv_shop_profile_district"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="end"
+            android:hint="ex) 서울특별시 동작구 상도동"
+            android:padding="8dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/et_shop_profile_username" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="추가주소"
+            app:layout_constraintBottom_toBottomOf="@+id/et_shop_profile_plusAddress"
+            app:layout_constraintEnd_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="@+id/et_shop_profile_plusAddress" />
+
+        <EditText
+            android:id="@+id/et_shop_profile_plusAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="end"
+            android:hint="ex) 상도빌딩 1층"
+            android:padding="8dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView25"
+            app:layout_constraintTop_toBottomOf="@+id/tv_shop_profile_district" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="전화번호"
+            app:layout_constraintBottom_toBottomOf="@+id/et_shop_profile_phone"
+            app:layout_constraintEnd_toEndOf="@+id/textView25"
+            app:layout_constraintTop_toTopOf="@+id/et_shop_profile_phone" />
+
+        <EditText
+            android:id="@+id/et_shop_profile_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:gravity="end"
+            android:hint="핸드폰 / 사업장 택1 / - 제외"
+            android:inputType="phone"
+            android:lines="1"
+            android:maxLength="12"
+            android:padding="8dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/et_shop_profile_plusAddress" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대표종목"
+            app:layout_constraintBottom_toBottomOf="@+id/sp_shopType"
+            app:layout_constraintEnd_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toTopOf="@+id/sp_shopType" />
+
+        <Spinner
+            android:id="@+id/sp_shopType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_shop_profile_phone" />
+
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="운영시간"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_shop_profile_time"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/tv_shop_profile_time" />
+
+        <Spinner
+            android:id="@+id/sp_shop_chatTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_shop_profile_time" />
+
+        <TextView
+            android:id="@+id/tv_shop_profile_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="end"
+            android:padding="8dp"
+            android:text="ex)AM8:00~PM6:00"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/sp_shopType" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상담시간"
+            app:layout_constraintBottom_toBottomOf="@+id/sp_shop_chatTime"
+            app:layout_constraintEnd_toEndOf="@+id/textView22"
+            app:layout_constraintTop_toTopOf="@+id/sp_shop_chatTime" />
+
+
+        <EditText
+            android:id="@+id/et_shop_profile_intro"
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="간단한 소개글을 작성해주세요."
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:maxLength="144"
+            android:maxLines="10"
+            android:minLines="6"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sp_shop_chatTime" />
+
+        <Button
+            android:id="@+id/write_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="취소"
+            app:layout_constraintBottom_toBottomOf="@+id/register_ok_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/register_ok_btn" />
+
+        <Button
+            android:id="@+id/register_ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="확인"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_shop_profile_intro" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>

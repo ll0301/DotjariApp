@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/myfriend_profilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_my_photo_24dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/chatRoom_message"
+        app:layout_constraintTop_toTopOf="parent" />
+    // android:visibility="gone" 보여주지않음
+
+
+    <TextView
+        android:id="@+id/chatRoom_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chatRoom_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="사용자 이름영역" />
+
+    <TextView
+        android:id="@+id/chatRoom_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/chat_box_right"
+        android:padding="6dp"
+        android:textColor="#000"
+        android:maxLines="1"
+        android:maxLength="29"
+        app:layout_constraintBottom_toTopOf="@+id/tv_seen"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="본인메세지" />
+
+    <!--    <ImageView
+        android:id="@+id/messageImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        tools:layout_editor_absoluteX="201dp"
+        tools:layout_editor_absoluteY="19dp" />-->
+
+    <TextView
+        android:id="@+id/tv_seen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="읽음"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/chatRoom_message"
+        app:layout_constraintTop_toBottomOf="@+id/iv_chatRoom_imgUri" />
+
+
+    <ImageView
+        android:id="@+id/iv_chatRoom_imgUri"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

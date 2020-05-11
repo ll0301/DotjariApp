@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TimePicker
+        android:id="@+id/timePicker_from"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TimePicker>
+
+
+    <TimePicker
+        android:id="@+id/timePicker_to"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="@+id/timePicker_from"
+        app:layout_constraintStart_toStartOf="@+id/timePicker_from"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker_from"></TimePicker>
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="시작시간"
+        app:layout_constraintStart_toStartOf="@+id/timePicker_from"
+        app:layout_constraintTop_toTopOf="@+id/timePicker_from" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="종료시간"
+        app:layout_constraintStart_toStartOf="@+id/timePicker_to"
+        app:layout_constraintTop_toTopOf="@+id/timePicker_to" />
+
+    <Button
+        android:id="@+id/btn_shopTime_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="확인"
+        app:layout_constraintStart_toStartOf="@+id/timePicker_to"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker_to" />
+
+    <Button
+        android:id="@+id/btn_shopTime_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="취소"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_shopTime_confirm"
+        app:layout_constraintEnd_toEndOf="@+id/timePicker_to"
+        app:layout_constraintTop_toTopOf="@+id/btn_shopTime_confirm" />
+
+</android.support.constraint.ConstraintLayout>
