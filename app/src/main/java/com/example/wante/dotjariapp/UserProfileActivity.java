@@ -4,10 +4,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,7 +15,6 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.wante.dotjariapp.Item.FriendsList;
 import com.example.wante.dotjariapp.Item.UserProfile;
-import com.firebase.ui.auth.data.model.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -30,7 +26,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Vector;
+
+import javax.annotation.Nonnull;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -269,7 +266,7 @@ public class UserProfileActivity extends AppCompatActivity {
             reference = FirebaseDatabase.getInstance().getReference("Users").child(userid);
             reference.addValueEventListener(new ValueEventListener() {
                 @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                public void onDataChange(@Nonnull DataSnapshot dataSnapshot) {
                   final UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
 
                   username.setText(userProfile.getUserName());
@@ -304,7 +301,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
 
                 @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
+                public void onCancelled(@Nonnull DatabaseError databaseError) {
 
                 }
             });
@@ -318,7 +315,7 @@ public class UserProfileActivity extends AppCompatActivity {
             DatabaseReference myRef = FirebaseDatabase.getInstance().getReference().child("Users").child(fuser.getUid());
             myRef.addValueEventListener(new ValueEventListener() {
                 @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                public void onDataChange(@Nonnull DataSnapshot dataSnapshot) {
                     FriendsList userProfile = dataSnapshot.getValue(FriendsList.class);
 
                     // FriendsList -> 프로필유저 -> 프로필유저 -> RequestList -> 내아이디
@@ -347,7 +344,7 @@ public class UserProfileActivity extends AppCompatActivity {
                             .child("RequestList");
                     reference1.addValueEventListener(new ValueEventListener() {
                         @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        public void onDataChange(@Nonnull DataSnapshot dataSnapshot) {
                             friendsLists = new ArrayList<>();
                             friendsLists.clear();
                             for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
@@ -361,7 +358,7 @@ public class UserProfileActivity extends AppCompatActivity {
                                     DatabaseReference  reference = FirebaseDatabase.getInstance().getReference("Users").child(userid);
                                     reference.addValueEventListener(new ValueEventListener() {
                                         @Override
-                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        public void onDataChange(@Nonnull DataSnapshot dataSnapshot) {
                                             final UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
 
                                             // (네번째)FriendsList -> 나 -> 상대유저아이디정보를 저장한다.
@@ -379,7 +376,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
                                         }
                                         @Override
-                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                                        public void onCancelled(@Nonnull DatabaseError databaseError) {
 
                                         }
                                     });
@@ -391,14 +388,14 @@ public class UserProfileActivity extends AppCompatActivity {
                         }
 
                         @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                        public void onCancelled(@Nonnull DatabaseError databaseError) {
 
                         }
                     });
 
                 }
                 @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
+                public void onCancelled(@Nonnull DatabaseError databaseError) {
 
                 }
             });
@@ -416,7 +413,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
             reference.addValueEventListener(new ValueEventListener() {
                 @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                public void onDataChange(@Nonnull DataSnapshot dataSnapshot) {
                     friendsLists = new ArrayList<>();
                     friendsLists.clear();
                     for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
@@ -427,7 +424,7 @@ public class UserProfileActivity extends AppCompatActivity {
                             DatabaseReference reference5 = FirebaseDatabase.getInstance().getReference("Users");
                             reference5.addValueEventListener(new ValueEventListener() {
                                 @Override
-                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                public void onDataChange(@Nonnull DataSnapshot dataSnapshot) {
 
                                     friendsLists = new ArrayList<>();
                                     friendsLists.clear();
@@ -456,7 +453,7 @@ public class UserProfileActivity extends AppCompatActivity {
                                 }
 
                                 @Override
-                                public void onCancelled(@NonNull DatabaseError databaseError) {
+                                public void onCancelled(@Nonnull DatabaseError databaseError) {
 
                                 }
                             });
@@ -468,7 +465,7 @@ public class UserProfileActivity extends AppCompatActivity {
                             DatabaseReference reference2 = FirebaseDatabase.getInstance().getReference("Users").child(fuser.getUid()).child("friendsList");
                             reference2.addValueEventListener(new ValueEventListener() {
                                 @Override
-                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                public void onDataChange(@Nonnull DataSnapshot dataSnapshot) {
                                     friendsLists = new ArrayList<>();
                                     friendsLists.clear();
                                     for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
@@ -480,7 +477,7 @@ public class UserProfileActivity extends AppCompatActivity {
                                             DatabaseReference reference3 = FirebaseDatabase.getInstance().getReference("Users");
                                             reference3.addValueEventListener(new ValueEventListener() {
                                                 @Override
-                                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                public void onDataChange(@Nonnull DataSnapshot dataSnapshot) {
 
                                                     friendsLists = new ArrayList<>();
                                                     friendsLists.clear();
@@ -521,7 +518,7 @@ public class UserProfileActivity extends AppCompatActivity {
                                                 }
 
                                                 @Override
-                                                public void onCancelled(@NonNull DatabaseError databaseError) {
+                                                public void onCancelled(@Nonnull DatabaseError databaseError) {
 
                                                 }
                                             });
@@ -533,7 +530,7 @@ public class UserProfileActivity extends AppCompatActivity {
                                 }
 
                                 @Override
-                                public void onCancelled(@NonNull DatabaseError databaseError) {
+                                public void onCancelled(@Nonnull DatabaseError databaseError) {
 
                                 }
                             });
@@ -546,7 +543,7 @@ public class UserProfileActivity extends AppCompatActivity {
                 }
 
                 @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
+                public void onCancelled(@Nonnull DatabaseError databaseError) {
 
                 }
             });
@@ -562,7 +559,7 @@ public class UserProfileActivity extends AppCompatActivity {
         DatabaseReference friendsSendsRef2 = FirebaseDatabase.getInstance().getReference().child("FriendsList").child(userid).child("RequestList");
         friendsSendsRef2.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public void onDataChange(@Nonnull DataSnapshot dataSnapshot) {
                 friendsLists.clear();
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     final FriendsList friendsList = snapshot.getValue(FriendsList.class);
@@ -572,7 +569,7 @@ public class UserProfileActivity extends AppCompatActivity {
                         DatabaseReference friendsSendsRef = FirebaseDatabase.getInstance().getReference().child("FriendsList").child(fuser.getUid()).child("RequestList");
                         friendsSendsRef.addValueEventListener(new ValueEventListener() {
                             @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            public void onDataChange(@Nonnull DataSnapshot dataSnapshot) {
                                 friendsLists = new ArrayList<>();
                                 friendsLists.clear();
                                 for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
@@ -591,7 +588,7 @@ public class UserProfileActivity extends AppCompatActivity {
                             }
 
                             @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                            public void onCancelled(@Nonnull DatabaseError databaseError) {
 
                             }
                         });
@@ -604,7 +601,7 @@ public class UserProfileActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+            public void onCancelled(@Nonnull DatabaseError databaseError) {
 
             }
         });
@@ -617,7 +614,7 @@ public class UserProfileActivity extends AppCompatActivity {
         DatabaseReference friendsGetRef2 = FirebaseDatabase.getInstance().getReference().child("FriendsList").child(fuser.getUid()).child("RequestList");
         friendsGetRef2.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public void onDataChange(@Nonnull DataSnapshot dataSnapshot) {
                 friendsLists.clear();
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     final FriendsList friendsList = snapshot.getValue(FriendsList.class);
@@ -627,7 +624,7 @@ public class UserProfileActivity extends AppCompatActivity {
                         DatabaseReference friendsSendsRef = FirebaseDatabase.getInstance().getReference().child("FriendsList").child(userid).child("RequestList");
                         friendsSendsRef.addValueEventListener(new ValueEventListener() {
                             @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            public void onDataChange(@Nonnull DataSnapshot dataSnapshot) {
                                 friendsLists = new ArrayList<>();
                                 friendsLists.clear();
                                 for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
@@ -644,7 +641,7 @@ public class UserProfileActivity extends AppCompatActivity {
                             }
 
                             @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                            public void onCancelled(@Nonnull DatabaseError databaseError) {
 
                             }
                         });
@@ -657,7 +654,7 @@ public class UserProfileActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+            public void onCancelled(@Nonnull DatabaseError databaseError) {
 
             }
         });
@@ -672,7 +669,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public void onDataChange(@Nonnull DataSnapshot dataSnapshot) {
 
                 friendsLists = new ArrayList<>();
                 friendsLists.clear();
@@ -685,7 +682,7 @@ public class UserProfileActivity extends AppCompatActivity {
                         DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference("Users").child(userid).child("friendsList");
                         reference1.addValueEventListener(new ValueEventListener() {
                             @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            public void onDataChange(@Nonnull DataSnapshot dataSnapshot) {
 
                                 friendsLists = new ArrayList<>();
                                 friendsLists.clear();
@@ -703,7 +700,7 @@ public class UserProfileActivity extends AppCompatActivity {
                             }
 
                             @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                            public void onCancelled(@Nonnull DatabaseError databaseError) {
 
                             }
                         });
@@ -713,7 +710,7 @@ public class UserProfileActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+            public void onCancelled(@Nonnull DatabaseError databaseError) {
 
             }
         });
