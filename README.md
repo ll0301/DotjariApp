@@ -27,7 +27,7 @@ Email : <wanted0301@gmail.com>
 ### 페이지 세부 기능 
   > ### 회원가입 / 로그인 / loading 화면 
   > <img src="./image/register.jpg" width="30%" height="30%"></img>
-  <img src="./image/login.jpg" width="30%" height="30%"></img>
+  <img src="./image/login.jpg" width="30%" height="30%"></img>    
   <img src="./image/intro.jpg" width="30%" height="30%"></img>
   <img src="./image/intro2.jpg" width="30%" height="30%"></img>
   > * Firebase Authentication 을 활용한 회원가입과 로그인 구현 
