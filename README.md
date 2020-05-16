@@ -34,10 +34,10 @@ Email : <wanted0301@gmail.com>
   > * 앱 처음 실행할 때, 로그인할 때 각각 로딩화면 구현 
   > * * *
   > ### 프로필 정보 변경 / 프로필 자세히 보기 
-  > <img src="./image/edit_profile.jpg" width="30%" height="30%"></img>
-  > <img src="./image/edit_profile2.jpg" width="30%" height="30%"></img>    
-  > <img src="./image/profile_detail.jpg" width="30%" height="30%"></img>
-  <img src="./image/profile_detail2.jpg" width="30%" height="30%"></img>    
+  > <img src="./image/edit_profile2.jpg" width="30%" height="30%"></img>
+  <img src="./image/edit_profile.jpg" width="30%" height="30%"></img>    
+  > <img src="./image/profile_detail2.jpg" width="30%" height="30%"></img>
+  <img src="./image/profile_detail.jpg" width="30%" height="30%"></img>    
   > * 이름, 상태, 이미지 변경    
   > * 프로필 자세히 보기
   > * * *
