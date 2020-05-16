@@ -35,8 +35,8 @@ Email : <wanted0301@gmail.com>
   > * * *
   > ### 프로필 정보 변경 / 프로필 자세히 보기 
   > <img src="./image/edit_profile.jpg" width="30%" height="30%"></img>
-  > <img src="./image/eidt_prifile2.jpg" width="30%" height="30%"></img>    
-  > * 이름, 상태, 이미지 변경 
+  > <img src="./image/eidt_prfile2.jpg" width="30%" height="30%"></img>    
+  > * 이름, 상태, 이미지 변경    
   > <img src="./image/profile_detail.jpg" width="30%" height="30%"></img>
   <img src="./image/profile_detail2.jpg" width="30%" height="30%"></img>    
   > * 프로필 자세히 보기
@@ -48,10 +48,10 @@ Email : <wanted0301@gmail.com>
   > ### 친구요청 / 친구수락 / 친구목록추가
   > <img src="./image/my_request.jpg" width="30%" height="30%"></img>
   <img src="./image/my_get_request.jpg" width="30%" height="30%"></img>    
-  > * 친구요청하기 
+  > * 친구요청하기    
   <img src="./image/my_request_confirm.jpg" width="30%" height="30%"></img>
   <img src="./image/my_list.jpg" width="30%" height="30%"></img>    
-  > * 친구수락, 친구목록확인 
+  > * 친구수락, 친구목록확인
   > * * *
   > ### 채팅하기 / 읽음, 읽지않음 표시 / 메세지 도착 알림 
   > <img src="./image/chat_start.jpg" width="30%" height="30%"></img>
