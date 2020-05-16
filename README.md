@@ -35,7 +35,7 @@ Email : <wanted0301@gmail.com>
   > * * *
   > ### 프로필 정보 변경 / 프로필 자세히 보기 
   > <img src="./image/edit_profile.jpg" width="30%" height="30%"></img>
-  > <img src="./image/eidt_prifle2.jpg" width="30%" height="30%"></img>    
+  > <img src="./image/eidt_prifile2.jpg" width="30%" height="30%"></img>    
   > * 이름, 상태, 이미지 변경 
   > <img src="./image/profile_detail.jpg" width="30%" height="30%"></img>
   <img src="./image/profile_detail2.jpg" width="30%" height="30%"></img>    
@@ -58,5 +58,6 @@ Email : <wanted0301@gmail.com>
   <img src="./image/chat_window2.jpg" width="30%" height="30%"></img>   
   <img src="./image/chat_window.jpg" width="30%" height="30%"></img> 
   <img src="./image/chat_notice.jpg" width="30%" height="30%"></img>
-  <img src="./image/chat_notice2.jpg" width="30%" height="30%"></img>
+  <img src="./image/chat_notice2.jpg" width="30%" height="30%"></img>    
+  > * 채팅기능 구현 
   > * * *
