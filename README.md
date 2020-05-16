@@ -43,3 +43,11 @@ Email : <wanted0301@gmail.com>
   <img src="./image/my_request_confirm.jpg" width="30%" height="30%"></img>
   <img src="./image/my_list.jpg" width="30%" height="30%"></img>
   > * * *
+  > ### 채팅하기 / 읽음, 읽지않음 표시 / 메세지 도착 알림 
+  > <img src="./image/chat_start.jpg" width="30%" height="30%"></img>
+  <img src="./image/chat_window.jpg" width="30%" height="30%"></img>
+  <img src="./image/chat_window2.jpg" width="30%" height="30%"></img>    
+  <img src="./image/chat_notice.jpg" width="30%" height="30%"></img>
+  <img src="./image/chat_notice2.jpg" width="30%" height="30%"></img>
+  > * * *
+  
