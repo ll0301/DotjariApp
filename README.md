@@ -3,7 +3,7 @@
 ## DotjariApp - 안드로이드 채팅 앱  
 
 [제작기간] 4주     
-[프로젝트 내용] 안드로이드 채팅 앱 
+[프로젝트 내용] 안드로이드 채팅 앱    
 [프로젝트 인원] 1명    
 
 소스코드 : <https://github.com/ll0301/DotjariApp/tree/master/app/src/main>    
