@@ -27,3 +27,4 @@ Email : <wanted0301@gmail.com>
 ### 페이지 세부 기능 
   > ### 회원가입 
   > ![login](./image/login.jpg)
+  > <img src="./image/login.jpg" width="10%" height="10%"></img>
