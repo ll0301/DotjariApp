@@ -32,4 +32,14 @@ Email : <wanted0301@gmail.com>
   <img src="./image/intro2.jpg" width="30%" height="30%"></img>
   > * Firebase Authentication 을 활용한 회원가입과 로그인 구현 
   > * 앱 처음 실행할 때, 로그인할 때 각각 로딩화면 구현 
-  
+  > * * *
+  > ### 친구찾기 
+  > <img src="./image/search_friends.jpg" width="30%" height="30%"></img>
+  > * 사용자 이름으로 친구검색 기능 구현 
+  > * * *
+  > ### 친구요청 / 친구수락 / 친구목록추가
+  > <img src="./image/my_request.jpg" width="30%" height="30%"></img>
+  <img src="./image/my_get_request.jpg" width="30%" height="30%"></img>    
+  <img src="./image/my_request_confirm.jpg" width="30%" height="30%"></img>
+  <img src="./image/my_list.jpg" width="30%" height="30%"></img>
+  > * * *
