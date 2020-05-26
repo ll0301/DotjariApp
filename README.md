@@ -1,6 +1,4 @@
-* * *
-# PORTFOLIO 1 
-## DotjariApp - 안드로이드 채팅 앱  
+# DotjariApp - 안드로이드 채팅 앱  
 
 [제작기간] 4주     
 [프로젝트 내용] 안드로이드 채팅 앱    
