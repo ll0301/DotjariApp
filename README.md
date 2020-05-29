@@ -12,7 +12,6 @@ Email : <jhhh171224@gmail.com>
 ### SKILL
   > #### Android    
   >  * java    
-  >  * xml 
   > #### Database   
   >  * Firebase - Authentication    
   >  * Firebase - Realtime Database    
