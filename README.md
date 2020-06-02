@@ -9,17 +9,14 @@
 블로그 : <https://jroomstudio.tistory.com/>    
 Email : <jhhh171224@gmail.com>    
 * * *
-### SKILL
-  > #### Android    
-  >  * java    
-  > #### Database   
-  >  * Firebase - Authentication    
-  >  * Firebase - Realtime Database    
-  > #### Library    
-  >  * GSON
-  >  * Glide
-  > #### ETC   
-  >  * Android Studio
+### SKILL  
+  >  * Android : Java, Firebase - Authentication, Firebase - Realtime Database, Gson, Glide
+  >  * Firebase Authentication을 활용한 회원가입, 로그인
+  >  * Firebase Realtime Database를 활용한 회원정보 CRUD 
+  >  * Firebase fcm 활용한 메시지 도착 알림 
+  >  * 친구검색, 등록, 삭제 
+  >  * 사용자 접속상태, 메시지 확인상태 구현
+  >  * 채팅방 생성하여 1대1 채팅 구현
 * * *
 ### 페이지 세부 기능 
   > ### 회원가입 / 로그인 / loading 화면 
